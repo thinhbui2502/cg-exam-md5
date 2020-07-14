@@ -1,0 +1,37 @@
+<div *ngIf="isShow">
+  <h1>{{message}}</h1>
+</div>
+<form [formGroup]="bookForm" (submit)="onSubmit()">
+  <input type="hidden" formGroupName="id" name="id">
+  <div>
+    <label>
+      Title
+      <br>
+      <input type="text" formControlName="title" name="title">
+    </label>
+  </div>
+
+  <!--  <div *ngIf="postForm.get('title').invalid && postForm.get('title').touched" style="color: red">-->
+  <!--    Title is required and min length is 10-->
+  <!--  </div>-->
+  <div>
+    <label>
+      Author
+      <br>
+      <input type="text" formControlName="author" name="author">
+    </label>
+  </div>
+
+  <div>
+    <label>
+      Description
+      <br>
+      <textarea formControlName="description" cols="50" rows="10" name="description"></textarea>
+    </label>
+  </div>
+  <!--  <div *ngIf="postForm.get('body').invalid && postForm.get('body').touched" style="color: red">-->
+  <!--    Body is required and min length is 10-->
+  <!--  </div>-->
+  <button class="btn btn-outline-success" type="submit">Submit</button>
+  <button style="margin-left: 10px" class="btn btn-outline-primary" (click)="backToList()">HOME</button>
+</form>

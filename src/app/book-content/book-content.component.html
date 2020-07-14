@@ -1,0 +1,21 @@
+<div class="container">
+  <h1 style="text-align: center">{{book.title}}</h1>
+  <div>
+    <label><b>Title:</b></label>
+    {{book.title}}
+  </div>
+
+  <div>
+    <label><b>Author:</b></label>
+    {{book.author}}
+  </div>
+
+  <div>
+    <label><b>Description:</b></label>
+    {{book.description}}
+  </div>
+  <button (click)="deleteBook(book.id)" class="btn btn-outline-danger">DELETE</button>
+
+  <button style="margin-left: 10px" class="btn btn-outline-primary" (click)="backToList()">HOME</button>
+</div>
+
